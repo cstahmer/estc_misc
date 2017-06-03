@@ -1,0 +1,20 @@
+Startup:
+
+Start solr:
+
+%	cd /home/sanju/solr/bin
+%	./solr start
+%	/home/sanju/Sites/catalog
+%	cd /home/sanju/Sites/collex
+%	rails s -p 3001
+
+
+
+
+To create a Catalog admin user:
+%	cd /home/sanju/Sites/catalog
+$	rake users:create user=cstahmer@ucdavis.edu,romantiX
+
+
+
+

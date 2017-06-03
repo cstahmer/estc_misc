@@ -1,0 +1,791 @@
+It doesn't make sense to me, but I think the new ESTC RDF on the Riverside server is in 
+/home/sanju/solr1/server/solr/archives/estc_rdf
+
+
+startup
+% rails s -p 3000
+
+% nohup rails s -p 3000 &
+
+sudo /sbin/service httpd restart
+
+q=+king&
+fq={!tag=fed}+federation:ESTC&
+hl.fl=text&
+hl.fragsize=600&
+hl.maxAnalyzedChars=512000&
+hl=true&
+hl.useFastVectorHighlighter=true&
+start=0&
+rows=30&
+facet=true&
+facet.field=genre&
+facet.field={!ex=arch}archive&
+facet.field=freeculture&
+facet.field=has_full_text&
+facet.field={!ex=fed}federation&
+facet.field=typewright&
+facet.field=doc_type&
+facet.field=discipline&
+facet.field=role&
+facet.mincount=1&
+facet.limit=-1&
+facet.missing=true&
+fl=uri archive date_label year genre source image thumbnail title alternative url role_ART role_AUT role_EDT role_PBL role_TRL role_EGR role_ETR role_CRE role_OWN freeculture is_ocr federation has_full_text source_xml provenance discipline typewright role_ARC role_BND role_BKD role_BKP role_CLL role_CTG role_COL role_CLR role_CWT role_COM role_CMT role_DUB role_FAC role_ILU role_ILL role_LTG role_PRT role_POP role_PRM role_RPS role_RBR role_SCR role_SCL role_TYD role_TYG role_WDE role_WDC role_BRD role_CNG role_CND role_DRT role_IVR role_IVE role_OWN role_FMO role_PRF role_PRO role_PRN has_pages hasPart isPartOf decade quarter_century half_century century subject digital_surrogats hasInstance instanceof&
+version=2.2&
+defType=edismax
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+q=+king&
+
+fq={!tag=fed}+federation:ESTC&
+
+hl.fl=text&
+
+hl.fragsize=600&
+
+hl.maxAnalyzedChars=512000&
+
+hl=true&
+
+hl.useFastVectorHighlighter=true&
+
+start=0&
+
+rows=30&
+
+facet=true&
+
+facet.field=genre&
+
+facet.field={!ex=arch}archive&
+
+facet.field=freeculture&
+
+facet.field=has_full_text&
+
+facet.field={!ex=fed}federation&
+
+facet.field=typewright&
+
+facet.field=doc_type&
+
+facet.field=discipline&
+
+facet.field=role&
+
+facet.mincount=1&
+
+facet.limit=-1&
+
+facet.missing=true&
+
+fl=uri archive date_label year genre source image thumbnail title alternative url role_ART role_AUT role_EDT role_PBL role_TRL role_EGR role_ETR role_CRE role_OWN freeculture is_ocr federation has_full_text source_xml provenance discipline typewright role_ARC role_BND role_BKD role_BKP role_CLL role_CTG role_COL role_CLR role_CWT role_COM role_CMT role_DUB role_FAC role_ILU role_ILL role_LTG role_PRT role_POP role_PRM role_RPS role_RBR role_SCR role_SCL role_TYD role_TYG role_WDE role_WDC role_BRD role_CNG role_CND role_DRT role_IVR role_IVE role_OWN role_FMO role_PRF role_PRO role_PRN has_pages hasPart isPartOf decade quarter_century half_century century subject digital_surrogats hasInstance instanceof&
+
+version=2.2&
+
+defType=edismax
+
+
+
+
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+{"q"=>"+king", "fq"=>"+federation:ESTC +freeculture:true", "hl.fl"=>"text", "hl.fragsize"=>600, "hl.maxAnalyzedChars"=>512000, "hl"=>true, "hl.useFastVectorHighlighter"=>true, "start"=>"0", "rows"=>"30"}
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+{"q"=>"+king", "fq"=>["{!tag=fed}+federation:ESTC"], "hl.fl"=>"text", "hl.fragsize"=>600, "hl.maxAnalyzedChars"=>512000, "hl"=>true, "hl.useFastVectorHighlighter"=>true, "start"=>"0", "rows"=>"30", :facet=>true, "facet.field"=>["genre", "{!ex=arch}archive", "freeculture", "has_full_text", "{!ex=fed}federation", "typewright", "doc_type", "discipline", "role"], "facet.mincount"=>1, "facet.limit"=>-1, "facet.missing"=>true, :fl=>"uri archive date_label year genre source image thumbnail title alternative url role_ART role_AUT role_EDT role_PBL role_TRL role_EGR role_ETR role_CRE role_OWN freeculture is_ocr federation has_full_text source_xml provenance discipline typewright role_ARC role_BND role_BKD role_BKP role_CLL role_CTG role_COL role_CLR role_CWT role_COM role_CMT role_DUB role_FAC role_ILU role_ILL role_LTG role_PRT role_POP role_PRM role_RPS role_RBR role_SCR role_SCL role_TYD role_TYG role_WDE role_WDC role_BRD role_CNG role_CND role_DRT role_IVR role_IVE role_OWN role_FMO role_PRF role_PRO role_PRN has_pages hasPart isPartOf decade quarter_century half_century century subject digital_surrogats hasInstance instanceof", "version"=>"2.2", "defType"=>"edismax"}
+{:total=>246740, :hits=>[{"is_ocr"=>"F", "role_RPS"=>["Duke University"], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/137437", "date_label"=>"1762", "role_OWN"=>["nNcD"], "title"=>"An epistle to the king.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/N31216", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R179286", "date_label"=>"1684", "title"=>"The King the good-fellows", "has_full_text"=>"F", "federation"=>["ESTC"], "hasInstance"=>["http://estc.bl.uk/2972653"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["[Mossom, Robert, bishop"], "role_RPS"=>["York Minster Library"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2969554", "date_label"=>"1643", "role_OWN"=>["bYc"], "title"=>"The King on his throne", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R180723", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["British Library"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2972653", "date_label"=>"1684", "role_OWN"=>["bL"], "title"=>"The King the good-fellows", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R179286", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["George King of Great Britain, 1683-1760", "1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/N69395", "date_label"=>"1760", "title"=>"Verses addressed to the king.", "has_full_text"=>"F", "federation"=>["ESTC"], "hasInstance"=>["http://estc.bl.uk/3404258", "http://estc.bl.uk/3169400", "http://estc.bl.uk/3139142"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Yale University, Beinecke Rare Book and Manuscript Library"], "subject"=>["George King of Great Britain, 1683-1760", "1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3169400", "date_label"=>"1760", "role_OWN"=>["nCtY-BR"], "title"=>"Verses addressed to the king.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/N69395", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Oxford University, Bodleian Library"], "subject"=>["George King of Great Britain, 1683-1760", "1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3404258", "date_label"=>"1760", "role_OWN"=>["bO"], "title"=>"Verses addressed to the king.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/N69395", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/N31216", "date_label"=>"1762", "title"=>"An epistle to the king.", "has_full_text"=>"F", "federation"=>["ESTC"], "hasInstance"=>["http://estc.bl.uk/137436", "http://estc.bl.uk/137437"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["[Mossom, Robert, bishop"], "role_RPS"=>["British Library"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2969553", "date_label"=>"1643", "role_OWN"=>["bL"], "title"=>"The King on his throne", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R180723", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["[Mossom, Robert, bishop"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R180723", "date_label"=>"1643", "title"=>"The King on his throne", "has_full_text"=>"F", "federation"=>["ESTC"], "hasInstance"=>["http://estc.bl.uk/2969553", "http://estc.bl.uk/2969554"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Henry E. Huntington Library and Art Gallery"], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/137436", "date_label"=>"1762", "role_OWN"=>["nCSmH"], "title"=>"An epistle to the king.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/N31216", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["New York Public Library"], "subject"=>["George King of Great Britain, 1683-1760", "1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3139142", "date_label"=>"1760", "role_OWN"=>["nNN"], "title"=>"Verses addressed to the king.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/N69395", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Broadside poems."], "is_ocr"=>"F", "role_RPS"=>["Bankfield Museum"], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/1666246", "date_label"=>"1794", "role_OWN"=>["bHAFm"], "title"=>"King and constitution. God save the King.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/T217168", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Broadside poems."], "is_ocr"=>"F", "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/T217168", "date_label"=>"1794", "title"=>"King and constitution. God save the King.", "has_full_text"=>"F", "federation"=>["ESTC"], "hasInstance"=>["http://estc.bl.uk/1666246"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Oxford University Bodleian Library (includes The Vicar's Library, ST. Mary's Church, Marlborough)"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2992181", "date_label"=>"1662", "role_OWN"=>["bO"], "title"=>"The psalms of King David", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R170570", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Evelyn, John, 1655-1699."], "role_RPS"=>["University of California, Los Angeles, William Andrews Clark Memorial Library"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2978159", "date_label"=>"1685", "role_OWN"=>["nCLU-C"], "title"=>"To the King: a congratulatory poem", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R176791", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Manning, Franci"], "role_RPS"=>["Princeton University"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3672458", "date_label"=>"1698", "role_OWN"=>["nNjP"], "title"=>"To His sacred Majesty, King William III", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R180294", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Shakespeare, William, 1564-1616."], "role_RPS"=>["Birmingham Central Libraries"], "subject"=>["Shakespeare, William, 1564-1616", "Shakespeare, William, 1564-1616", "1701-1800", "Promptbooks."], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/1989266", "date_label"=>"1800", "role_OWN"=>["bBMp"], "title"=>"King Lear, a tragedy, by William Shakspere.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/T65534", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Ellis, Philip, 1652-1726."], "role_RPS"=>["The Founders' Library, University of Wales Lampeter"], "subject"=>["Catholic Church", "1641-1700", "Sermons, English", "Sermons, English"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/549521", "date_label"=>"1686", "role_OWN"=>["bLAM"], "title"=>"A sermon preach'd before the King,", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R29976", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["University of Cincinnati"], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/4765", "date_label"=>"1723", "role_OWN"=>["nOCU"], "title"=>"An ode humbly inscribed to the King.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/N10541", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Ellis, Philip, 1652-1726."], "role_RPS"=>["Manchester, Chetham's Library"], "subject"=>["Catholic Church", "1641-1700", "Sermons, English", "Sermons, English"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/549523", "date_label"=>"1686", "role_OWN"=>["bMRc"], "title"=>"A sermon preach'd before the King,", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R29976", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Shakespeare, William, 1564-1616."], "role_RPS"=>["California State Library-Sutro"], "subject"=>["Shakespeare, William, 1564-1616", "Shakespeare, William, 1564-1616", "1701-1800", "Promptbooks."], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/1989268", "date_label"=>"1800", "role_OWN"=>["nC-S"], "title"=>"King Lear, a tragedy, by William Shakspere.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/T65534", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Ellis, Philip, 1652-1726."], "subject"=>["Catholic Church", "1641-1700", "Sermons, English", "Sermons, English"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R29976", "date_label"=>"1686", "title"=>"A sermon preach'd before the King,", "has_full_text"=>"F", "federation"=>["ESTC"], "hasInstance"=>["http://estc.bl.uk/549519", "http://estc.bl.uk/549516", "http://estc.bl.uk/549517", "http://estc.bl.uk/549518", "http://estc.bl.uk/3082943", "http://estc.bl.uk/3082942", "http://estc.bl.uk/549520", "http://estc.bl.uk/549521", "http://estc.bl.uk/549522", "http://estc.bl.uk/549523", "http://estc.bl.uk/549524", "http://estc.bl.uk/549526", "http://estc.bl.uk/549530", "http://estc.bl.uk/549527", "http://estc.bl.uk/549528", "http://estc.bl.uk/549515", "http://estc.bl.uk/3839190", "http://estc.bl.uk/3076821", "http://estc.bl.uk/549529"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["National Library of Scotland"], "subject"=>["Ossian, active 3rd century.", "Ossian, active 3rd century.", "1701-1800", "Scottish literature", "Scottish literature"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2088754", "date_label"=>"1764", "role_OWN"=>["bE"], "title"=>"Fingal King of Morven, a Knight-Errant.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/T77041", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["John Carter Brown Library, Brown University"], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/174061", "date_label"=>"1760", "role_OWN"=>["nRPJCB"], "title"=>"An ode on the King of Prussia.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/N42254", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Evelyn, John, 1655-1699."], "role_RPS"=>["New York Public Library"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2978163", "date_label"=>"1685", "role_OWN"=>["nNN"], "title"=>"To the King: a congratulatory poem", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R176791", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Evelyn, John, 1655-1699."], "role_RPS"=>["Oxford University Bodleian Library (includes The Vicar's Library, ST. Mary's Church, Marlborough)"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2978157", "date_label"=>"1685", "role_OWN"=>["bO"], "title"=>"To the King: a congratulatory poem", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R176791", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Dryden, John, 1631-1700."], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/N55198", "date_label"=>"1736", "title"=>"Don Sebastian, King of Portugal. A tragedy. ...", "has_full_text"=>"F", "federation"=>["ESTC"], "hasInstance"=>["http://estc.bl.uk/211409"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Ellis, Philip, 1652-1726."], "role_RPS"=>["Harvard University"], "subject"=>["Catholic Church", "1641-1700", "Sermons, English", "Sermons, English"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/549515", "date_label"=>"1686", "role_OWN"=>["nMH"], "title"=>"A sermon preach'd before the King,", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/R29976", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Edinburgh University Library New College Library (includes United Free Church Library & General Assembly of the Church of Scotland Library)"], "subject"=>["Ossian, active 3rd century.", "Ossian, active 3rd century.", "1701-1800", "Scottish literature", "Scottish literature"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3730839", "date_label"=>"1764", "role_OWN"=>["bEn"], "title"=>"Fingal King of Morven, a Knight-Errant.", "has_full_text"=>"F", "instanceof"=>"http://estc.bl.uk/T77041", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}], :facets=>{"genre"=>[{:name=>"Abridgements.", :count=>89}, {:name=>"Academic dissertations.", :count=>18}, {:name=>"Account books.", :count=>2}, {:name=>"Acrostics.", :count=>4}, {:name=>"Addresses,", :count=>2}, {:name=>"Addresses.", :count=>1819}, {:name=>"Administrative regulations.", :count=>2}, {:name=>"Advertisements", :count=>27}, {:name=>"Advertisements.", :count=>774}, {:name=>"Allegories.", :count=>6}, {:name=>"Almanacs", :count=>49}, {:name=>"Almanacs.", :count=>371}, {:name=>"Anthologies.", :count=>50}, {:name=>"Anti-Catholic literature.", :count=>12}, {:name=>"Atlases (Geographic).", :count=>6}, {:name=>"Auction catalogs.", :count=>4}, {:name=>"Autobiographies.", :count=>67}, {:name=>"Ballads", :count=>10}, {:name=>"Ballads.", :count=>28}, {:name=>"Bible.", :count=>7}, {:name=>"Bibliographies.", :count=>142}, {:name=>"Bills.", :count=>16}, {:name=>"Biographies", :count=>54}, {:name=>"Biographies.", :count=>408}, {:name=>"Blank forms.", :count=>69}, {:name=>"Book auction catalogs.", :count=>7}, {:name=>"Book prospectuses.", :count=>2}, {:name=>"Booksellers' advertisements", :count=>315}, {:name=>"Booksellers' advertisements.", :count=>4}, {:name=>"Booksellers' catalogs", :count=>22}, {:name=>"Booksellers' catalogs.", :count=>36}, {:name=>"Broadside poems.", :count=>2804}, {:name=>"Broadsides", :count=>773}, {:name=>"Broadsides .", :count=>2}, {:name=>"Broadsides, English.", :count=>2}, {:name=>"Broadsides.", :count=>1288}, {:name=>"Burlesques.", :count=>30}, {:name=>"Calendars.", :count=>2}, {:name=>"Captivity narratives.", :count=>6}, {:name=>"Casts lists", :count=>2}, {:name=>"Catalogs.", :count=>252}, {:name=>"Catechisms.", :count=>6}, {:name=>"Chapbooks", :count=>37}, {:name=>"Chapbooks.", :count=>21}, {:name=>"Charters.", :count=>14}, {:name=>"Chronicles.", :count=>50}, {:name=>"Comedies.", :count=>18}, {:name=>"Comic histories.", :count=>2}, {:name=>"Confessions.", :count=>5}, {:name=>"Congressional addresses", :count=>35}, {:name=>"Constitutions.", :count=>14}, {:name=>"Cookbooks.", :count=>23}, {:name=>"Courtesy books.", :count=>38}, {:name=>"Deeds.", :count=>2}, {:name=>"Devotional literature", :count=>20}, {:name=>"Devotional literature.", :count=>30}, {:name=>"Dialogues", :count=>2}, {:name=>"Dialogues.", :count=>78}, {:name=>"Diaries.", :count=>15}, {:name=>"Dictionaries.", :count=>24}, {:name=>"Directories.", :count=>62}, {:name=>"Discoursive works.", :count=>15}, {:name=>"Division lists.", :count=>80}, {:name=>"Election sermons", :count=>8}, {:name=>"Elegiac poetry, English.", :count=>3}, {:name=>"Elegies.", :count=>20}, {:name=>"Emblem books.", :count=>2}, {:name=>"Ephemerides.", :count=>2}, {:name=>"Epistolary novels.", :count=>33}, {:name=>"Essays", :count=>3}, {:name=>"Essays.", :count=>366}, {:name=>"Exploration literature.", :count=>12}, {:name=>"Fables.", :count=>3}, {:name=>"Facetiae.", :count=>3}, {:name=>"Fairy tales.", :count=>2}, {:name=>"Fast day proclamations", :count=>106}, {:name=>"Fast day proclamations.", :count=>2}, {:name=>"Fast-day sermons", :count=>12}, {:name=>"Fiction.", :count=>521}, {:name=>"Fourth of July addresses", :count=>14}, {:name=>"Funeral addresses", :count=>3}, {:name=>"Funeral sermons", :count=>131}, {:name=>"Funeral sermons.", :count=>6}, {:name=>"Gallows speeches.", :count=>27}, {:name=>"Games.", :count=>4}, {:name=>"Gazetteers.", :count=>14}, {:name=>"Genealogies.", :count=>5}, {:name=>"Geographic works.", :count=>2}, {:name=>"Grammars.", :count=>27}, {:name=>"Guidebooks.", :count=>7}, {:name=>"Historical fiction.", :count=>5}, {:name=>"Historical works.", :count=>15}, {:name=>"Humorous works.", :count=>4}, {:name=>"Hymns.", :count=>64}, {:name=>"Illustrated works.", :count=>8}, {:name=>"Imaginary voyages.", :count=>13}, {:name=>"Jestbooks.", :count=>23}, {:name=>"Juvenile literature", :count=>84}, {:name=>"Juvenile literature.", :count=>9}, {:name=>"Lampoons.", :count=>3}, {:name=>"Laws, session.", :count=>5}, {:name=>"Laws.", :count=>943}, {:name=>"Lectures.", :count=>21}, {:name=>"Legal formularies.", :count=>40}, {:name=>"Legal petitions.", :count=>8}, {:name=>"Legal works.", :count=>108}, {:name=>"Legislative addresses.", :count=>101}, {:name=>"Legislative proceedings", :count=>2}, {:name=>"Legislative proceedings.", :count=>62}, {:name=>"Letters.", :count=>1483}, {:name=>"Liturgical books.", :count=>25}, {:name=>"Local histories.", :count=>175}, {:name=>"Manuals (Handbooks).", :count=>11}, {:name=>"Maps", :count=>56}, {:name=>"Membership lists.", :count=>2}, {:name=>"Memoirs.", :count=>284}, {:name=>"Memorials (Commemorative)", :count=>2}, {:name=>"Military histories", :count=>10}, {:name=>"Military histories.", :count=>21}, {:name=>"Military manuals.", :count=>13}, {:name=>"Miscellanies.", :count=>4}, {:name=>"Musical works.", :count=>22}, {:name=>"Narratives", :count=>12}, {:name=>"Narratives.", :count=>201}, {:name=>"National songs.", :count=>4}, {:name=>"Newsbooks", :count=>7}, {:name=>"Newsbooks.", :count=>521}, {:name=>"Newspapers", :count=>112}, {:name=>"Newspapers.", :count=>65}, {:name=>"Novels.", :count=>165}, {:name=>"Occasional poems.", :count=>11}, {:name=>"Occasional sermons.", :count=>7}, {:name=>"Odes.", :count=>25}, {:name=>"Operas.", :count=>2}, {:name=>"Parliamentary addresses.", :count=>2}, {:name=>"Parliamentary petitions.", :count=>82}, {:name=>"Periodicals", :count=>315}, {:name=>"Periodicals.", :count=>32}, {:name=>"Petitions.", :count=>84}, {:name=>"Playbills.", :count=>12}, {:name=>"Plays", :count=>30}, {:name=>"Plays.", :count=>1782}, {:name=>"Poems", :count=>162}, {:name=>"Poems.", :count=>2494}, {:name=>"Political works.", :count=>4}, {:name=>"Prayer books", :count=>15}, {:name=>"Prayer books.", :count=>61}, {:name=>"Prayers.", :count=>54}, {:name=>"Primers (Instructional books)", :count=>5}, {:name=>"Primers (Instructional books).", :count=>2}, {:name=>"Printers' advertisements", :count=>27}, {:name=>"Proclamations", :count=>3}, {:name=>"Proclamations.", :count=>240}, {:name=>"Programs.", :count=>6}, {:name=>"Prospectuses.", :count=>200}, {:name=>"Protest literature.", :count=>4}, {:name=>"Psalters", :count=>17}, {:name=>"Psalters.", :count=>56}, {:name=>"Questions and answers.", :count=>26}, {:name=>"Record-keeping works.", :count=>2}, {:name=>"Regulations.", :count=>9}, {:name=>"Romances.", :count=>9}, {:name=>"Royal ordinances.", :count=>10}, {:name=>"Royal petitions.", :count=>35}, {:name=>"Sales catalogs.", :count=>27}, {:name=>"Satire.", :count=>6}, {:name=>"Satires.", :count=>129}, {:name=>"Sermons", :count=>198}, {:name=>"Sermons.", :count=>4237}, {:name=>"Session laws.", :count=>121}, {:name=>"Song sheets.", :count=>2}, {:name=>"Songs", :count=>2}, {:name=>"Songs.", :count=>475}, {:name=>"Speeches.", :count=>3}, {:name=>"Sporting event programs.", :count=>2}, {:name=>"Subscribers' lists.", :count=>41}, {:name=>"Subscription lists.", :count=>2}, {:name=>"Technical formularies.", :count=>8}, {:name=>"Textbooks.", :count=>2}, {:name=>"Thanksgiving day proclamations", :count=>101}, {:name=>"Thanksgiving sermons", :count=>44}, {:name=>"Thanksgiving sermons.", :count=>31}, {:name=>"Theater programs.", :count=>2}, {:name=>"Tragedies.", :count=>139}, {:name=>"Translations.", :count=>22}, {:name=>"Travel literature.", :count=>104}, {:name=>"Treaties.", :count=>104}, {:name=>"Trial proceedings.", :count=>117}, {:name=>"Type specimens.", :count=>2}, {:name=>"Utopian literature. |2rbgenr", :count=>2}, {:name=>"Voting registers.", :count=>2}, {:name=>"Yearbooks.", :count=>6}, {:name=>"plays.", :count=>6}], "archive"=>[{:name=>"estcstar", :count=>246740}], "freeculture"=>[{:name=>"T", :count=>246740}], "has_full_text"=>[{:name=>"F", :count=>246740}], "federation"=>[{:name=>"ESTC", :count=>246740}], "typewright"=>[], "doc_type"=>[], "discipline"=>[], "role"=>[{:name=>"role_AUT", :count=>153146}, {:name=>"role_OWN", :count=>221732}, {:name=>"role_RPS", :count=>221231}]}}
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+2017-01-06 14:45:27 -0800 PARAMS info: : []
+2017-01-06 14:45:27 -0800 GET: http://estc21.ucr.edu:3000/archives.xml ARGS: 
+2017-01-06 14:45:27 -0800 Results Info: {"resource_tree"=>{"nodes"=>"\n  ", "archives"=>{"archive"=>{"name"=>"estc", "handle"=>"estcstar", "site_url"=>nil, "thumbnail"=>nil}}}}
+Carls-UCD-MacBook-Pro:log cstahmer$ 
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+
+{"q"=>"+king", "fq"=>["{!tag=fed}+federation:ESTC"], "hl.fl"=>"text", "hl.fragsize"=>600, "hl.maxAnalyzedChars"=>512000, "hl"=>true, "hl.useFastVectorHighlighter"=>true, "start"=>"180", "rows"=>"30", :facet=>true, "facet.field"=>["genre", "{!ex=arch}archive", "freeculture", "has_full_text", "{!ex=fed}federation", "typewright", "doc_type", "discipline", "role"], "facet.mincount"=>1, "facet.limit"=>-1, "facet.missing"=>true, :fl=>"uri archive date_label year genre source image thumbnail title alternative url role_ART role_AUT role_EDT role_PBL role_TRL role_EGR role_ETR role_CRE role_OWN freeculture is_ocr federation has_full_text source_xml provenance discipline typewright role_ARC role_BND role_BKD role_BKP role_CLL role_CTG role_COL role_CLR role_CWT role_COM role_CMT role_DUB role_FAC role_ILU role_ILL role_LTG role_PRT role_POP role_PRM role_RPS role_RBR role_SCR role_SCL role_TYD role_TYG role_WDE role_WDC role_BRD role_CNG role_CND role_DRT role_IVR role_IVE role_OWN role_FMO role_PRF role_PRO role_PRN has_pages hasPart isPartOf decade quarter_century half_century century subject digital_surrogats", "version"=>"2.2", "defType"=>"edismax"}
+
+
+
+
+uri archive date_label year genre source image thumbnail title alternative url role_ART role_AUT role_EDT role_PBL role_TRL role_EGR role_ETR role_CRE role_OWN freeculture is_ocr federation has_full_text source_xml provenance discipline typewright role_ARC role_BND role_BKD role_BKP role_CLL role_CTG role_COL role_CLR role_CWT role_COM role_CMT role_DUB role_FAC role_ILU role_ILL role_LTG role_PRT role_POP role_PRM role_RPS role_RBR role_SCR role_SCL role_TYD role_TYG role_WDE role_WDC role_BRD role_CNG role_CND role_DRT role_IVR role_IVE role_OWN role_FMO role_PRF role_PRO role_PRN has_pages hasPart isPartOf decade quarter_century half_century century subject digital_surrogats
+uri archive date_label year genre source image thumbnail title alternative url role_ART role_AUT role_EDT role_PBL role_TRL role_EGR role_ETR role_CRE role_OWN freeculture is_ocr federation has_full_text source_xml provenance discipline typewright role_ARC role_BND role_BKD role_BKP role_CLL role_CTG role_COL role_CLR role_CWT role_COM role_CMT role_DUB role_FAC role_ILU role_ILL role_LTG role_PRT role_POP role_PRM role_RPS role_RBR role_SCR role_SCL role_TYD role_TYG role_WDE role_WDC role_BRD role_CNG role_CND role_DRT role_IVR role_IVE role_OWN role_FMO role_PRF role_PRO role_PRN has_pages hasPart isPartOf decade quarter_century half_century century subject digital_surrogats
+
+
+ "uri", "archive", "date_label", 'year', "genre", "source", "image", "thumbnail", "title", "alternative", "url",
+   			"role_ART", "role_AUT", "role_EDT", "role_PBL", "role_TRL", "role_EGR", "role_ETR", "role_CRE", "role_OWN", "freeculture",
+   			"is_ocr", "federation", "has_full_text", "source_xml", "provenance", "discipline", 'typewright',
+            "role_ARC", "role_BND", "role_BKD", "role_BKP", "role_CLL", "role_CTG", "role_COL", "role_CLR", "role_CWT", "role_COM", "role_CMT",
+            "role_DUB", "role_FAC", "role_ILU", "role_ILL", "role_LTG", "role_PRT", "role_POP", "role_PRM",
+            "role_RPS", "role_RBR", "role_SCR", "role_SCL", "role_TYD", "role_TYG", "role_WDE", "role_WDC",
+   	      "role_BRD", "role_CNG", "role_CND", "role_DRT", "role_IVR", "role_IVE", "role_OWN", "role_FMO", "role_PRF", "role_PRO", "role_PRN",
+            "has_pages", "hasPart", "isPartOf", "decade", "quarter_century", "half_century", "century", "subject", "digital_surrogats"
+
+
+
+{:total=>246740, :hits=>[
+	{"is_ocr"=>"F", "role_AUT"=>["Pudsey, George, Sir, 1664?-"], "subject"=>["James King of England, 1633-1701", "1641-1700", "Broadsides", "Great Britain"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R226878", "date_label"=>"1687", "title"=>"Sir George Pudsey's speech to the King.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Poems."], "is_ocr"=>"F", "role_AUT"=>["King, William, 1685-1763."], "role_RPS"=>["University of Notre Dame"], "subject"=>["1701-1800", "Latin poetry"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2545595", "date_label"=>"1742", "role_OWN"=>["nInNd"], "title"=>"Templum libertatis. Liber primus.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["British Library"], "subject"=>["1701-1800", "Seven Years' War, 1756-1763."], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/1350548", "date_label"=>"1718", "role_OWN"=>["bL"], "title"=>"His Majesty's declaration of war against the King of Spain.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Poems."], "is_ocr"=>"F", "role_RPS"=>["Oxford University, Bodleian Library"], "subject"=>["1701-1800", "Historical poetry, English"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3429357", "date_label"=>"1701", "role_OWN"=>["bO"], "title"=>"An historical poem upon his late Majesty King James II.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Trinity College Library"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3093496", "date_label"=>"1649", "role_OWN"=>["bDt"], "title"=>"The subjects sorrovv: or, lamentations . . . King Charles", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Lincoln Cathedral Library"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2985636", "date_label"=>"1649", "role_OWN"=>["bLIN"], "title"=>"The subjects sorrovv: or, lamentations . . . King Charles", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/T210438", "date_label"=>"1790", "title"=>"The history of the king and cobler. Part the second.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["[Corker, James"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R171543", "date_label"=>"1683", "title"=>"Roman-Catholick principles, in reference to God and the King", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Poems."], "is_ocr"=>"F", "role_AUT"=>["King, William, 1685-1763."], "role_RPS"=>["Yale University Walpole Library"], "subject"=>["1701-1800", "Latin poetry"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3194217", "date_label"=>"1742", "role_OWN"=>["nCtY-LW"], "title"=>"Templum libertatis. Liber primus.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Bacon, Francis, Viscount St. Albans"], "role_RPS"=>["Ushaw College"], "subject"=>["1473-1640"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2949816", "date_label"=>"1628", "role_OWN"=>["bDUuc"], "title"=>"The historie of the raigne of king Henry the seventh.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Poems."], "is_ocr"=>"F", "role_AUT"=>["King, William, 1685-1763."], "role_RPS"=>["Oxford University All Souls College Codrington Library"], "subject"=>["1701-1800", "Latin poetry"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/3724064", "date_label"=>"1742", "role_OWN"=>["bOa"], "title"=>"Templum libertatis. Liber primus.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Poems."], "is_ocr"=>"F", "role_AUT"=>["King, William, 1685-1763."], "role_RPS"=>["Rice University"], "subject"=>["1701-1800", "Latin poetry"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2545603", "date_label"=>"1742", "role_OWN"=>["nTxHR"], "title"=>"Templum libertatis. Liber primus.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Poems."], "is_ocr"=>"F", "role_AUT"=>["King, William, 1685-1763."], "role_RPS"=>["University of Kansas, Spencer Research"], "subject"=>["1701-1800", "Latin poetry"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2545599", "date_label"=>"1742", "role_OWN"=>["nKU-S"], "title"=>"Templum libertatis. Liber primus.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"genre"=>["Poems."], "is_ocr"=>"F", "role_AUT"=>["King, William, 1685-1763."], "role_RPS"=>["Oxford University All Souls College Codrington Library"], "subject"=>["1701-1800", "Latin poetry"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2545589", "date_label"=>"1742", "role_OWN"=>["bOa"], "title"=>"Templum libertatis. Liber primus.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Mitchel, William, 1670 or 1671-1740."], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/T198499", "date_label"=>"1711", "title"=>"The Tinclarian Doctor Mitchel's letter to the King of France.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["1701-1800", "Passes (Transportation)"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/T19556", "date_label"=>"1792", "title"=>"By the King. A proclamation.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Oxford University Bodleian Library (includes The Vicar's Library, ST. Mary's Church, Marlborough)"], "subject"=>["1701-1800", "Passes (Transportation)"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2530624", "date_label"=>"1800", "role_OWN"=>["bO"], "title"=>"By the King. A proclamation, for a general fast.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R185095", "date_label"=>"1696", "title"=>"29th Sept. 1696. To be paid five pounds the King", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["England and Wales.", "1641-1700", "Great Britain", "Great Britain"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R172040", "date_label"=>"1692", "title"=>"The address of the House of Commons to the King", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["[Corker, James"], "role_RPS"=>["Oxford University Bodleian Library (includes The Vicar's Library, ST. Mary's Church, Marlborough)"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2989433", "date_label"=>"1683", "role_OWN"=>["bO"], "title"=>"Roman-Catholick principles, in reference to God and the King", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Pudsey, George, Sir, 1664?-"], "role_RPS"=>["Folger Shakespeare"], "subject"=>["James King of England, 1633-1701", "1641-1700", "Broadsides", "Great Britain"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2896775", "date_label"=>"1687", "role_OWN"=>["nDFo"], "title"=>"Sir George Pudsey's speech to the King.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Edinburgh University Library"], "subject"=>["England and Wales.", "1641-1700", "Great Britain", "Great Britain"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2987932", "date_label"=>"1692", "role_OWN"=>["bEu"], "title"=>"The address of the House of Commons to the King", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/R177441", "date_label"=>"1680", "title"=>"God and the King, or monarchy proved.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["John Carter Brown Library, Brown University"], "subject"=>["1701-1800", "Seven Years' War, 1756-1763."], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/1350564", "date_label"=>"1762", "role_OWN"=>["nRPJCB"], "title"=>"His Majesty's declaration of war against the King of Spain", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Marsh, Charles, -1782."], "role_RPS"=>["Henry E. Huntington Library and Art Gallery"], "subject"=>["Amasis, active 6th century B.C.", "1701-1800", "English drama."], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/43302", "date_label"=>"1738", "role_OWN"=>["nCSmH"], "title"=>"Amasis King of Egypt. A tragedy. By Charles Marsh.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "subject"=>["1701-1800", "Scotland"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/T19483", "date_label"=>"1701", "title"=>"By the King, a proclamation, for a general fast.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["British Library"], "subject"=>["1701-1800", "Seven Years' War, 1756-1763."], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/1350560", "date_label"=>"1762", "role_OWN"=>["bL"], "title"=>"His Majesty's declaration of war against the King of Spain", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Folger Shakespeare"], "subject"=>["1641-1700"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/2950941", "date_label"=>"1688", "role_OWN"=>["nDFo"], "title"=>"King Josiah causing the horses dedicated to the Sun", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_AUT"=>["Young, Edward, 1683-1765."], "role_RPS"=>["University of Illinois"], "subject"=>["1701-1800"], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/176801", "date_label"=>"1739", "role_OWN"=>["nIU"], "title"=>"Busiris, King of Egypt. A tragedy. By E. Young, LL.B.", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}, {"is_ocr"=>"F", "role_RPS"=>["Society of the Cincinnati"], "subject"=>["1701-1800", "Seven Years' War, 1756-1763."], "freeculture"=>"T", "uri"=>"http://estc.bl.uk/1350563", "date_label"=>"1762", "role_OWN"=>["nDSoC"], "title"=>"His Majesty's declaration of war against the King of Spain", "has_full_text"=>"F", "federation"=>["ESTC"], "year"=>["Uncertain"], "archive"=>"estcstar"}], :facets=>{"genre"=>[{:name=>"Abridgements.", :count=>89}, {:name=>"Academic dissertations.", :count=>18}, {:name=>"Account books.", :count=>2}, {:name=>"Acrostics.", :count=>4}, {:name=>"Addresses,", :count=>2}, {:name=>"Addresses.", :count=>1819}, {:name=>"Administrative regulations.", :count=>2}, {:name=>"Advertisements", :count=>27}, {:name=>"Advertisements.", :count=>774}, {:name=>"Allegories.", :count=>6}, {:name=>"Almanacs", :count=>49}, {:name=>"Almanacs.", :count=>371}, {:name=>"Anthologies.", :count=>50}, {:name=>"Anti-Catholic literature.", :count=>12}, {:name=>"Atlases (Geographic).", :count=>6}, {:name=>"Auction catalogs.", :count=>4}, {:name=>"Autobiographies.", :count=>67}, {:name=>"Ballads", :count=>10}, {:name=>"Ballads.", :count=>28}, {:name=>"Bible.", :count=>7}, {:name=>"Bibliographies.", :count=>142}, {:name=>"Bills.", :count=>16}, {:name=>"Biographies", :count=>54}, {:name=>"Biographies.", :count=>408}, {:name=>"Blank forms.", :count=>69}, {:name=>"Book auction catalogs.", :count=>7}, {:name=>"Book prospectuses.", :count=>2}, {:name=>"Booksellers' advertisements", :count=>315}, {:name=>"Booksellers' advertisements.", :count=>4}, {:name=>"Booksellers' catalogs", :count=>22}, {:name=>"Booksellers' catalogs.", :count=>36}, {:name=>"Broadside poems.", :count=>2804}, {:name=>"Broadsides", :count=>773}, {:name=>"Broadsides .", :count=>2}, {:name=>"Broadsides, English.", :count=>2}, {:name=>"Broadsides.", :count=>1288}, {:name=>"Burlesques.", :count=>30}, {:name=>"Calendars.", :count=>2}, {:name=>"Captivity narratives.", :count=>6}, {:name=>"Casts lists", :count=>2}, {:name=>"Catalogs.", :count=>252}, {:name=>"Catechisms.", :count=>6}, {:name=>"Chapbooks", :count=>37}, {:name=>"Chapbooks.", :count=>21}, {:name=>"Charters.", :count=>14}, {:name=>"Chronicles.", :count=>50}, {:name=>"Comedies.", :count=>18}, {:name=>"Comic histories.", :count=>2}, {:name=>"Confessions.", :count=>5}, {:name=>"Congressional addresses", :count=>35}, {:name=>"Constitutions.", :count=>14}, {:name=>"Cookbooks.", :count=>23}, {:name=>"Courtesy books.", :count=>38}, {:name=>"Deeds.", :count=>2}, {:name=>"Devotional literature", :count=>20}, {:name=>"Devotional literature.", :count=>30}, {:name=>"Dialogues", :count=>2}, {:name=>"Dialogues.", :count=>78}, {:name=>"Diaries.", :count=>15}, {:name=>"Dictionaries.", :count=>24}, {:name=>"Directories.", :count=>62}, {:name=>"Discoursive works.", :count=>15}, {:name=>"Division lists.", :count=>80}, {:name=>"Election sermons", :count=>8}, {:name=>"Elegiac poetry, English.", :count=>3}, {:name=>"Elegies.", :count=>20}, {:name=>"Emblem books.", :count=>2}, {:name=>"Ephemerides.", :count=>2}, {:name=>"Epistolary novels.", :count=>33}, {:name=>"Essays", :count=>3}, {:name=>"Essays.", :count=>366}, {:name=>"Exploration literature.", :count=>12}, {:name=>"Fables.", :count=>3}, {:name=>"Facetiae.", :count=>3}, {:name=>"Fairy tales.", :count=>2}, {:name=>"Fast day proclamations", :count=>106}, {:name=>"Fast day proclamations.", :count=>2}, {:name=>"Fast-day sermons", :count=>12}, {:name=>"Fiction.", :count=>521}, {:name=>"Fourth of July addresses", :count=>14}, {:name=>"Funeral addresses", :count=>3}, {:name=>"Funeral sermons", :count=>131}, {:name=>"Funeral sermons.", :count=>6}, {:name=>"Gallows speeches.", :count=>27}, {:name=>"Games.", :count=>4}, {:name=>"Gazetteers.", :count=>14}, {:name=>"Genealogies.", :count=>5}, {:name=>"Geographic works.", :count=>2}, {:name=>"Grammars.", :count=>27}, {:name=>"Guidebooks.", :count=>7}, {:name=>"Historical fiction.", :count=>5}, {:name=>"Historical works.", :count=>15}, {:name=>"Humorous works.", :count=>4}, {:name=>"Hymns.", :count=>64}, {:name=>"Illustrated works.", :count=>8}, {:name=>"Imaginary voyages.", :count=>13}, {:name=>"Jestbooks.", :count=>23}, {:name=>"Juvenile literature", :count=>84}, {:name=>"Juvenile literature.", :count=>9}, {:name=>"Lampoons.", :count=>3}, {:name=>"Laws, session.", :count=>5}, {:name=>"Laws.", :count=>943}, {:name=>"Lectures.", :count=>21}, {:name=>"Legal formularies.", :count=>40}, {:name=>"Legal petitions.", :count=>8}, {:name=>"Legal works.", :count=>108}, {:name=>"Legislative addresses.", :count=>101}, {:name=>"Legislative proceedings", :count=>2}, {:name=>"Legislative proceedings.", :count=>62}, {:name=>"Letters.", :count=>1483}, {:name=>"Liturgical books.", :count=>25}, {:name=>"Local histories.", :count=>175}, {:name=>"Manuals (Handbooks).", :count=>11}, {:name=>"Maps", :count=>56}, {:name=>"Membership lists.", :count=>2}, {:name=>"Memoirs.", :count=>284}, {:name=>"Memorials (Commemorative)", :count=>2}, {:name=>"Military histories", :count=>10}, {:name=>"Military histories.", :count=>21}, {:name=>"Military manuals.", :count=>13}, {:name=>"Miscellanies.", :count=>4}, {:name=>"Musical works.", :count=>22}, {:name=>"Narratives", :count=>12}, {:name=>"Narratives.", :count=>201}, {:name=>"National songs.", :count=>4}, {:name=>"Newsbooks", :count=>7}, {:name=>"Newsbooks.", :count=>521}, {:name=>"Newspapers", :count=>112}, {:name=>"Newspapers.", :count=>65}, {:name=>"Novels.", :count=>165}, {:name=>"Occasional poems.", :count=>11}, {:name=>"Occasional sermons.", :count=>7}, {:name=>"Odes.", :count=>25}, {:name=>"Operas.", :count=>2}, {:name=>"Parliamentary addresses.", :count=>2}, {:name=>"Parliamentary petitions.", :count=>82}, {:name=>"Periodicals", :count=>315}, {:name=>"Periodicals.", :count=>32}, {:name=>"Petitions.", :count=>84}, {:name=>"Playbills.", :count=>12}, {:name=>"Plays", :count=>30}, {:name=>"Plays.", :count=>1782}, {:name=>"Poems", :count=>162}, {:name=>"Poems.", :count=>2494}, {:name=>"Political works.", :count=>4}, {:name=>"Prayer books", :count=>15}, {:name=>"Prayer books.", :count=>61}, {:name=>"Prayers.", :count=>54}, {:name=>"Primers (Instructional books)", :count=>5}, {:name=>"Primers (Instructional books).", :count=>2}, {:name=>"Printers' advertisements", :count=>27}, {:name=>"Proclamations", :count=>3}, {:name=>"Proclamations.", :count=>240}, {:name=>"Programs.", :count=>6}, {:name=>"Prospectuses.", :count=>200}, {:name=>"Protest literature.", :count=>4}, {:name=>"Psalters", :count=>17}, {:name=>"Psalters.", :count=>56}, {:name=>"Questions and answers.", :count=>26}, {:name=>"Record-keeping works.", :count=>2}, {:name=>"Regulations.", :count=>9}, {:name=>"Romances.", :count=>9}, {:name=>"Royal ordinances.", :count=>10}, {:name=>"Royal petitions.", :count=>35}, {:name=>"Sales catalogs.", :count=>27}, {:name=>"Satire.", :count=>6}, {:name=>"Satires.", :count=>129}, {:name=>"Sermons", :count=>198}, {:name=>"Sermons.", :count=>4237}, {:name=>"Session laws.", :count=>121}, {:name=>"Song sheets.", :count=>2}, {:name=>"Songs", :count=>2}, {:name=>"Songs.", :count=>475}, {:name=>"Speeches.", :count=>3}, {:name=>"Sporting event programs.", :count=>2}, {:name=>"Subscribers' lists.", :count=>41}, {:name=>"Subscription lists.", :count=>2}, {:name=>"Technical formularies.", :count=>8}, {:name=>"Textbooks.", :count=>2}, {:name=>"Thanksgiving day proclamations", :count=>101}, {:name=>"Thanksgiving sermons", :count=>44}, {:name=>"Thanksgiving sermons.", :count=>31}, {:name=>"Theater programs.", :count=>2}, {:name=>"Tragedies.", :count=>139}, {:name=>"Translations.", :count=>22}, {:name=>"Travel literature.", :count=>104}, {:name=>"Treaties.", :count=>104}, {:name=>"Trial proceedings.", :count=>117}, {:name=>"Type specimens.", :count=>2}, {:name=>"Utopian literature. |2rbgenr", :count=>2}, {:name=>"Voting registers.", :count=>2}, {:name=>"Yearbooks.", :count=>6}, {:name=>"plays.", :count=>6}], "archive"=>[{:name=>"estcstar", :count=>246740}], "freeculture"=>[{:name=>"T", :count=>246740}], "has_full_text"=>[{:name=>"F", :count=>246740}], "federation"=>[{:name=>"ESTC", :count=>246740}], "typewright"=>[], "doc_type"=>[], "discipline"=>[], "role"=>[{:name=>"role_AUT", :count=>153146}, {:name=>"role_OWN", :count=>221732}, {:name=>"role_RPS", :count=>221231}]}}
+  Rendered search/index.xml.builder (134.5ms)
+Completed 200 OK in 502ms (Views: 166.2ms | ActiveRecord: 2.4ms)
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+XXX
+
+
+
+http://estc.bl.uk/3404550
+
+
+
+
+
+
+http://estc21.ucr.edu:8983/solr/#/archive_estcstar/select?wt=json&indent=true&q=foundation&fl=id"
+
+
+
+http://estc21.ucr.edu:8983/solr/#/archive_estcstar/select?wt=json&indent=true&q=king
+
+
+
+
+
+
+
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=uri%3A%22http%3A%2F%2Festc.bl.uk%2F3404550%22&wt=json&indent=true
+
+
+
+
+
+var str = "http://estc.bl.uk/3404550";
+var repSlash = str.replace(/\//g, "%2F");
+var str = repSlash.replace(/\:/g, "%3A");
+this.JsdConsole.log(str);
+
+
+
+
+
+# page that draws the search return
+/RAILS-ROOT/estc_collex/sites/collex/app/assets/javascripts/search/search_result_draw_media_bloc.js
+
+# Builds the XML for a search return
+Catalog/app/views/search/index.xml.builder
+
+# Where the SOLR queries are written
+/RAILS-ROOT/estc_collex/sites/catalog/app/models/solr.rb
+	# line 42 assignment 'year' and 'typewrite' were originally in single quotes
+	
+	
+collex/app/conrolers/search_controller.rb receives the query and builds a list of constraints (line 67) and send the 
+query to /collex/app/models/catalog.rb which is where it is converted into a request to send to the catalog (line 186)
+	actual solr call happends on line 774 in fucntion call_solr
+	
+Everything looks copacetic with the query on the collex side.  Here's the parameters that are being sent to catalog
+elseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+{"q"=>"king", "controller"=>"search", "action"=>"index", "format"=>"json"}
+{:key=>"q", :val=>["king"]}
+{:key=>"f", :val=>"ESTC"}
+Request URL
+http://estc21.ucr.edu:3000
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+q=+king
+f=+federation:ESTC
+hl=on
+start=0
+q=%2Bking&f=%2Bfederation%3AESTC&hl=on&start=0
+
+To test, send query from above to http://estc21.ucr.edu:3000/search.xml?q=%2Bking&f=%2Bfederation%3AESTC&hl=on&start=0
+
+search_controller.rb is where the magic starts on the catalog side
+	
+	Everything seems to run fine query-wise in the search_controller.rb file up until the
+	call gets made to the Solr model on line 62	
+	
+	
+START HERE
+* need to add proper lucene syntax to the query to only reurn records that don't have
+and instanceof.  see http://stackoverflow.com/questions/4365369/solr-search-for-documents-where-a-field-doesnt-exist.
+Have to figure out how to add this param to the query
+
+Add a line (11) to /catalog/app/controllers/search_controller.rb to try to add a parameter to remove instanceof
+records.  Can't test because wifi is to unstable.
+
+
+
+	
+	
+	
+	
+When I submit a search I can see from the console that it is now returning all of the appropriate fields.
+Things still aren't displaying correctly, but the problem is in the display and not the data that
+is being returned.
+
+First thing I should do is to put my version of search_result_draw_media_bloc.js in place
+and see how that affects anything.
+
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXX
+Dealing with Holdings
+
+search_result_draw_media_block
+
+Lines 446 and 447 are the lines that deal with initiating the drawing process.  446 is the original 
+call This was was correctly returning all of the holdings.  Check to make sure it still is. (YES, it works)
+Line 447 is a call to my new case.  It invokes the function at line 202, specifically
+line 243
+
+
+example URI for CURL request that returns holding info:  http://estc21.ucr.edu/details/holdings?uri=http%3A%2F%2Festc.bl.uk%2F2972653
+
+
+
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+    
+I added a progress dialog that says "Loading..." in the function that draws the results in search_result_draw_media_block at line 
+692.  It is closed on line 721.
+
+
+
+http%3A%2F%2Festc.bl.uk%2FR179286
+
+XXXXXXXXXXXXXXXXXXXXXXXX
+URLs I've been working with:
+http://estc21.ucr.edu:8983/solr/archive_estcstar/query?uri=http%3A%2F%2Festc.bl.uk%2FN69395
+http://estc21.ucr.edu:3000/search.xml?q=%2Bking&f=%2Bfederation%3AESTC&hl=on&start=0
+http://estc21.ucr.edu/search?t=A%20circumstantial%20history%20of%20the%20transactions&fuz_q=1&fuz_t=1
+http://estc21.ucr.edu:8983/solr/#/archive_estcstar/query?uri=http%3A%2F%2Festc.bl.uk%2FN69395
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=*%3A*&wt=json&indent=true&uri=http://estc.bl.uk/R179286
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=*%3A*&wt=json&indent=true&uri=http://estc.bl.uk/R179286
+http://estc21.ucr.edu:3000/
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=uri%3A%22http%3A%2F%2Festc.bl.uk%2FN38516%22&wt=json&indent=true
+
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+search_controller.rb around line 74 is where the initial search query is made.  This is where I can break in if I want to 
+handle the query on the Collex side.  But it would probably be better to handle it on the catalog side so that 
+it works when it is called from anywhere in Collex.
+
+the function process_contraints(query)  (line 124) is where the hash that sets the search fields for sending to catalog
+gets set.  This is where I'll need to modify things so that it adds the restriction value so that it only
+returns parents.  Alternatively I could add it to the params hash before it gets sent.  (line 74)
+
+
+NLG-Libraries-FY17-2
+
+4050531
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+FIX THE SEARCH RETURNS SO THAT IT ONLY RETURNS MAIN ESTC RECORDS ON SEARCH PAGE
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Here are some working solr queries:
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=*%3A*&wt=json&indent=true
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=title%3Aking&wt=json&indent=true
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=is_ocr%3AF+AND+title%3Aking&wt=json&indent=true
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=is_ocr%3AF+AND+-instanceof%3Ahttp*&wt=json&indent=true
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=title%3Aking+AND+-instanceof%3Ahttp*&wt=json&indent=true
+
+
+Problem is definitely happening between line 8 and 73 of search_controller.rb (catalog)
+
+Error is actually firing somewhere in query_format.rb function create_solr_query() line 763.  Called
+by search_contoller.rb line 50
+
+failure error is getting thrown at query_format.rb line 810
+
+
+Turns out that I can use the 'fq' (filter query) parameter to filter the records on a field:
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=title&wt=json&indent=true&fq=-instanceof%3Ahttp*
+You can also have more than one of these, so all I should need to do is to push it onto the parameters list
+
+I tried pushing an fq parameter into params at line 64 of collex/app/controllers/search_controller.rb
+but it broke everything.  Need to keep experimenting.
+
+
+
+OK.  I've got a line at line  185  of the collex search_controller.rb that adds the fq parameter to the
+search query.  This is working correctly, and sending the correct filter parameter to the catalog,
+but the catalog isn't recognizing the fq parameter and throws this error:
+
+Search error: http://estc21.ucr.edu:3000 returns: Unknown parameter: fq
+
+I've temporarily commented out the line so that things will work for now.  I need to trace
+this through the catalog and try to get it to recognize the parameter.  Strat tracing this
+down at search_controller.rb line 52 with the call to QueryFormat.create_solr_query()
+
+The actual error is getting throuwn from query_format.rb line 785
+To fix the error I add 'fq' paramaters to the hash definitions and format checker at 
+lines collex model query_format.rb lines 71 and 159
+
+This seems to be working now
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Fix search options problem
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Options seem to be getting pushed from search_result_draw_query.js.  Look at line
+93 to see where things might be getting pushed.  Line 109 seems to have something to 
+do with the autocomplete
+
+These are the places I'm working trying to add new searchable facets to the display:
+
+./app/assets/javascripts/search/search_result_draw_query.js
+	line 5  	function searchFormType(key)
+	line 187	where each <td> row of the search form is created.  It does this dynmically
+				as part of the function window.collex.createSearchForm = function(query, roles, workTitle)
+				which gets sent some data when it is called.  
+	line 64 	function newSearchTerm(roles, disabled ) is where the new search term list is populated.
+				It gets send a "roles" variable which is meant to handle all the rolls.  I need to figure
+				out where this "roles" object gets created and how it gets sent here.  It also just
+				hardcodes some variable.  I'm going to try just adding an ESTCID item to line 65.
+				THIS WORKED.
+	
+	
+
+FLOW:  	
+		
+		Initial Query:  estc21.ucr.edu/search?king
+		
+		AJAX response looks like:
+		
+		
+		{"total_hits":"25501","hits":[{"is_ocr":"F","subject":["1641-1700"],"freeculture":"T","uri":"http://estc
+.bl.uk/R179286","date_label":"1684","title":"The King the good-fellows","has_full_text":"F","federation"
+:["ESTC"],"coverage":["Great Britain--England--London"],"hasInstance":["http://estc.bl.uk/2972653"],"year"
+:["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["George King of Great Britain, 1683-1760"
+,"1701-1800"],"freeculture":"T","uri":"http://estc.bl.uk/N69395","date_label":"1760","title":"Verses
+ addressed to the king.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"
+],"hasInstance":["http://estc.bl.uk/3404258","http://estc.bl.uk/3169400","http://estc.bl.uk/3139142"
+],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["1701-1800"],"freeculture":"T"
+,"uri":"http://estc.bl.uk/N31216","date_label":"1762","title":"An epistle to the king.","has_full_text"
+:"F","federation":["ESTC"],"coverage":["Great Britain--England--London"],"hasInstance":["http://estc
+.bl.uk/137436","http://estc.bl.uk/137437"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","role_AUT"
+:["[Mossom, Robert, bishop"],"subject":["1641-1700"],"freeculture":"T","uri":"http://estc.bl.uk/R180723"
+,"date_label":"1643","title":"The King on his throne","has_full_text":"F","federation":["ESTC"],"hasInstance"
+:["http://estc.bl.uk/2969553","http://estc.bl.uk/2969554"],"year":["Uncertain"],"archive":"estcstar"
+},{"genre":["Broadside poems."],"is_ocr":"F","subject":["1701-1800"],"freeculture":"T","uri":"http:/
+/estc.bl.uk/T217168","date_label":"1794","title":"King and constitution. God save the King.","has_full_text"
+:"F","federation":["ESTC"],"description":["A slip-song - \"God save great George our king,\".","Includes
+ 'Britons strike home'."],"hasInstance":["http://estc.bl.uk/1666246"],"year":["Uncertain"],"archive"
+:"estcstar"},{"is_ocr":"F","role_AUT":["Ellis, Philip, 1652-1726."],"subject":["Catholic Church","1641-1700"
+,"Sermons, English","Sermons, English"],"freeculture":"T","uri":"http://estc.bl.uk/R29976","date_label"
+:"1686","title":"A sermon preach'd before the King,","has_full_text":"F","federation":["ESTC"],"coverage"
+:["Great Britain--England--London"],"hasInstance":["http://estc.bl.uk/549519","http://estc.bl.uk/549516"
+,"http://estc.bl.uk/549517","http://estc.bl.uk/549518","http://estc.bl.uk/3082943","http://estc.bl.uk
+/3082942","http://estc.bl.uk/549520","http://estc.bl.uk/549521","http://estc.bl.uk/549522","http://estc
+.bl.uk/549523","http://estc.bl.uk/549524","http://estc.bl.uk/549526","http://estc.bl.uk/549530","http
+://estc.bl.uk/549527","http://estc.bl.uk/549528","http://estc.bl.uk/549515","http://estc.bl.uk/3839190"
+,"http://estc.bl.uk/3076821","http://estc.bl.uk/549529"],"year":["Uncertain"],"archive":"estcstar"},
+{"is_ocr":"F","role_AUT":["Dryden, John, 1631-1700."],"subject":["1701-1800"],"freeculture":"T","uri"
+:"http://estc.bl.uk/N55198","date_label":"1736","title":"Don Sebastian, King of Portugal. A tragedy.
+ ...","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"],"hasInstance"
+:["http://estc.bl.uk/211409"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","role_AUT":["Evelyn
+, John, 1655-1699."],"subject":["1641-1700"],"freeculture":"T","uri":"http://estc.bl.uk/R176791","date_label"
+:"1685","title":"To the King: a congratulatory poem","has_full_text":"F","federation":["ESTC"],"coverage"
+:["Great Britain--England--London"],"hasInstance":["http://estc.bl.uk/2978154","http://estc.bl.uk/2978155"
+,"http://estc.bl.uk/2978156","http://estc.bl.uk/2978157","http://estc.bl.uk/2978153","http://estc.bl
+.uk/2978159","http://estc.bl.uk/2978158","http://estc.bl.uk/2978160","http://estc.bl.uk/2978161","http
+://estc.bl.uk/2978162","http://estc.bl.uk/2978163","http://estc.bl.uk/2978164","http://estc.bl.uk/2978165"
+],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","role_AUT":["Shakespeare, William, 1564-1616
+."],"subject":["Shakespeare, William, 1564-1616","Shakespeare, William, 1564-1616","1701-1800","Promptbooks
+."],"freeculture":"T","uri":"http://estc.bl.uk/T65534","date_label":"1800","title":"King Lear, a tragedy
+, by William Shakspere.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--Manchester"
+],"hasInstance":["http://estc.bl.uk/1989266","http://estc.bl.uk/1989267","http://estc.bl.uk/1989265"
+,"http://estc.bl.uk/3436974","http://estc.bl.uk/1989268","http://estc.bl.uk/3205685","http://estc.bl
+.uk/1989269"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","role_AUT":["Manning, Franci"
+],"subject":["1641-1700"],"freeculture":"T","uri":"http://estc.bl.uk/R180294","date_label":"1698","title"
+:"To His sacred Majesty, King William III","has_full_text":"F","federation":["ESTC"],"coverage":["Great
+ Britain--England--London"],"hasInstance":["http://estc.bl.uk/2970504","http://estc.bl.uk/3672458","http
+://estc.bl.uk/2970505"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["1641-1700"
+],"freeculture":"T","uri":"http://estc.bl.uk/R170570","date_label":"1662","title":"The psalms of King
+ David","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"],"description"
+:["WING GHOST."],"hasInstance":["http://estc.bl.uk/2992181"],"year":["Uncertain"],"archive":"estcstar"
+},{"is_ocr":"F","subject":["1701-1800"],"freeculture":"T","uri":"http://estc.bl.uk/N10541","date_label"
+:"1723","title":"An ode humbly inscribed to the King.","has_full_text":"F","federation":["ESTC"],"coverage"
+:["Great Britain--England--London"],"hasInstance":["http://estc.bl.uk/4765","http://estc.bl.uk/4766"
+],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["1701-1800"],"freeculture":"T"
+,"uri":"http://estc.bl.uk/N42254","date_label":"1760","title":"An ode on the King of Prussia.","has_full_text"
+:"F","federation":["ESTC"],"coverage":["Antigua and Barbuda--Antigua--St. John's"],"hasInstance":["http
+://estc.bl.uk/174061"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["Ossian, active
+ 3rd century.","Ossian, active 3rd century.","1701-1800","Scottish literature","Scottish literature"
+],"freeculture":"T","uri":"http://estc.bl.uk/T77041","date_label":"1764","title":"Fingal King of Morven
+, a Knight-Errant.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"
+],"hasInstance":["http://estc.bl.uk/2088755","http://estc.bl.uk/2088754","http://estc.bl.uk/3730839"
+,"http://estc.bl.uk/3790066","http://estc.bl.uk/2088756","http://estc.bl.uk/2088753","http://estc.bl
+.uk/2088757","http://estc.bl.uk/2088758","http://estc.bl.uk/2088759","http://estc.bl.uk/2088760"],"year"
+:["Uncertain"],"archive":"estcstar"},{"genre":["Plays."],"is_ocr":"F","role_AUT":["Shakespeare, William
+, 1564-1616."],"subject":["1701-1800","English Drama","English Drama"],"freeculture":"T","uri":"http
+://estc.bl.uk/N475289","date_label":"1794","title":"The works of Shakespeare. ... Containing Comedy of
+ Errors. Winter's Tale. King John. King Richard II. First Part of King Henry IV. Second Part of King
+ Henry IV.","has_full_text":"F","federation":["ESTC"],"coverage":["Ireland--Dublin"],"hasInstance":["http
+://estc.bl.uk/3288409"],"year":["Uncertain"],"archive":"estcstar"},{"genre":["Plays."],"is_ocr":"F","role_AUT"
+:["Shakespeare, William, 1564-1616."],"subject":["1701-1800","Historical drama, English","Historical
+ drama, English"],"freeculture":"T","uri":"http://estc.bl.uk/N474721","date_label":"1750","title":"The
+ works of Mr. William Shakespear.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"
+],"description":["In fact the dramatic works only.","\"Volume the fourth. Containing, The winter's tale
+. King Lear. King John. King Richard II.\"; \"Volume the fifth. Containing, King Henry IV. Part I. King
+ Henry IV. Part II. King Henry V. King Henry VI. Part I.\"; \"Volume the sixth. Containing, King Henry
+ VI. Part II. King Henry VI. Part III. King Richard III. King Henry VIII.\"; \"Volume the seventh. Containing
+, \"Timon of Athens. Cariolanus. Julius C\u00e6sar. Antony and Cleopatra.\""],"hasInstance":["http:/
+/estc.bl.uk/3273153"],"year":["Uncertain"],"archive":"estcstar"},{"genre":["Songs."],"is_ocr":"F","subject"
+:["1701-1800","Songs, English"],"freeculture":"T","uri":"http://estc.bl.uk/T29470","date_label":"1800"
+,"title":"The king of drunkards.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"
+],"description":["A slip-song - \"I am the king and the prince of drunkards,\"."],"hasInstance":["http
+://estc.bl.uk/1273730","http://estc.bl.uk/1273731"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr"
+:"F","role_AUT":["Isma??i?l, Sultan of Morocco, -1727."],"subject":["1641-1700","Pirates","Morocco","Morocco"
+],"freeculture":"T","uri":"http://estc.bl.uk/R16908","date_label":"1682","title":"The King of Morocco's
+ letter by his ambassador to the King of England.","has_full_text":"F","federation":["ESTC"],"coverage"
+:["Great Britain--England--London"],"hasInstance":["http://estc.bl.uk/3565756","http://estc.bl.uk/377075"
+,"http://estc.bl.uk/3299727","http://estc.bl.uk/3436734","http://estc.bl.uk/3018001","http://estc.bl
+.uk/377073","http://estc.bl.uk/3189805"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject"
+:["1701-1800"],"freeculture":"T","uri":"http://estc.bl.uk/T173504","date_label":"1714","title":"A pindaric
+ essay on the arrival of His Majesty King George. Address'd to the king.","has_full_text":"F","federation"
+:["ESTC"],"coverage":["Great Britain--England--London"],"description":["Verse."],"hasInstance":["http
+://estc.bl.uk/1568725"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["1701-1800"
+],"freeculture":"T","uri":"http://estc.bl.uk/T154997","date_label":"1716","title":"King George's sevenfold
+ right unfolded. Or, a sevenfold defence of King George's right to the crown.","has_full_text":"F","federation"
+:["ESTC"],"coverage":["Great Britain--England--London"],"hasInstance":["http://estc.bl.uk/3308072","http
+://estc.bl.uk/1519765","http://estc.bl.uk/1519766"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr"
+:"F","role_AUT":["Charles I, King of England, 1600-1649."],"subject":["1701-1800"],"freeculture":"T"
+,"uri":"http://estc.bl.uk/T26566","date_label":"1703","title":"Remarkable sayings of King Charles the
+ Martyr.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"],"description"
+:["With three engravings of the King."],"hasInstance":["http://estc.bl.uk/1247957","http://estc.bl.uk
+/3432041","http://estc.bl.uk/1247958"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","role_AUT"
+:["Englishman"],"subject":["1701-1800","Great Britain"],"freeculture":"T","uri":"http://estc.bl.uk/T65253"
+,"date_label":"1756","title":"A letter to the King of *****. By an Englishman; Not a Member of the House
+ of Commons.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"
+],"description":["King of ***** = King of France.","With a half-title."],"hasInstance":["http://estc
+.bl.uk/1986715","http://estc.bl.uk/1986717","http://estc.bl.uk/1986716","http://estc.bl.uk/1986713","http
+://estc.bl.uk/1986714","http://estc.bl.uk/1986718","http://estc.bl.uk/1986720","http://estc.bl.uk/1986719"
+,"http://estc.bl.uk/1986721","http://estc.bl.uk/1986723","http://estc.bl.uk/3168005","http://estc.bl
+.uk/1986724","http://estc.bl.uk/1986726","http://estc.bl.uk/1986725","http://estc.bl.uk/1986727","http
+://estc.bl.uk/1986729","http://estc.bl.uk/1986730","http://estc.bl.uk/3852256","http://estc.bl.uk/3852255"
+,"http://estc.bl.uk/1986731","http://estc.bl.uk/1986728","http://estc.bl.uk/1986732","http://estc.bl
+.uk/3126741","http://estc.bl.uk/3126742","http://estc.bl.uk/3126740","http://estc.bl.uk/1986735","http
+://estc.bl.uk/1986736"],"year":["Uncertain"],"archive":"estcstar"},{"genre":["Letters."],"is_ocr":"F"
+,"role_AUT":["Tom the first, King of Ireland"],"subject":["1701-1800","Great Britain"],"freeculture"
+:"T","uri":"http://estc.bl.uk/T195881","date_label":"1757","title":"A leter from Tom the First, king
+ of Ireland, to John the Second, king of Scotland. With the King of Scotland's answer thereto.","has_full_text"
+:"F","federation":["ESTC"],"coverage":["Ireland--Dublin"],"hasInstance":["http://estc.bl.uk/1627433"
+,"http://estc.bl.uk/1627432"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["1701-1800"
+],"freeculture":"T","uri":"http://estc.bl.uk/T70507","date_label":"1709","title":"The creditors of King
+ Charles, King James, and King William, having found out and discover'd sufficient funds for securing
+ a perpetual interest for four millions, ...","has_full_text":"F","federation":["ESTC"],"coverage":["Great
+ Britain--England--London"],"hasInstance":["http://estc.bl.uk/2033425"],"year":["Uncertain"],"archive"
+:"estcstar"},{"genre":["Poems."],"is_ocr":"F","role_AUT":["Crabb, John, 1665 or 1666-1749."],"subject"
+:["1701-1800","English poetry"],"freeculture":"T","uri":"http://estc.bl.uk/T114985","date_label":"1717"
+,"title":"A poem to the King.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"
+],"description":["Anonymous. By John Crabb."],"hasInstance":["http://estc.bl.uk/2454777","http://estc
+.bl.uk/2454778"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["1701-1800","Passes
+ (Transportation)"],"freeculture":"T","uri":"http://estc.bl.uk/T187553","date_label":"1715","title":"By
+ the King, a proclamation for calling a new Parliament.","has_full_text":"F","federation":["ESTC"],"coverage"
+:["Great Britain--Scotland--Edinburgh"],"hasInstance":["http://estc.bl.uk/1610342","http://estc.bl.uk
+/1610343","http://estc.bl.uk/1610344","http://estc.bl.uk/3087196"],"year":["Uncertain"],"archive":"estcstar"
+},{"is_ocr":"F","subject":["1701-1800","Seven Years' War, 1756-1763."],"freeculture":"T","uri":"http
+://estc.bl.uk/T36246","date_label":"1762","title":"His Majesty's declaration of war against the King
+ of Spain","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"],"hasInstance"
+:["http://estc.bl.uk/1350561","http://estc.bl.uk/1350560","http://estc.bl.uk/1350562","http://estc.bl
+.uk/1350563","http://estc.bl.uk/1350564"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject"
+:["1701-1800","Passes (Transportation)"],"freeculture":"T","uri":"http://estc.bl.uk/N32460","date_label"
+:"1775","title":"By the King, a proclamation, for suppressing rebellion and sedition.","has_full_text"
+:"F","federation":["ESTC"],"coverage":["Great Britain--England--London"],"hasInstance":["http://estc
+.bl.uk/142586","http://estc.bl.uk/142585"],"year":["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","role_AUT"
+:["Marsh, Charles, -1782."],"subject":["Amasis, active 6th century B.C.","1701-1800","English drama."
+],"freeculture":"T","uri":"http://estc.bl.uk/N15758","date_label":"1738","title":"Amasis King of Egypt
+. A tragedy. By Charles Marsh.","has_full_text":"F","federation":["ESTC"],"coverage":["Great Britain--England--London"
+],"hasInstance":["http://estc.bl.uk/43298","http://estc.bl.uk/43299","http://estc.bl.uk/43300","http
+://estc.bl.uk/43302","http://estc.bl.uk/43301","http://estc.bl.uk/43297","http://estc.bl.uk/43303"],"year"
+:["Uncertain"],"archive":"estcstar"},{"is_ocr":"F","subject":["1701-1800"],"freeculture":"T","uri":"http
+://estc.bl.uk/T39025","date_label":"1793","title":"Massacre of the French King!","has_full_text":"F"
+,"federation":["ESTC"],"coverage":["Great Britain--England--London"],"description":["An engraving with
+ letterpress."],"hasInstance":["http://estc.bl.uk/1384088"],"year":["Uncertain"],"archive":"estcstar"
+}],"facets":{"genre":{"Abridgements.":"10","Academic dissertations.":"2","Account books.":"1","Acrostics
+.":"1","Addresses,":"1","Addresses.":"173","Administrative regulations.":"1","Advertisements":"11","Advertisements
+.":"296","Allegories.":"1","Almanacs":"7","Almanacs.":"75","Anthologies.":"2","Anti-Catholic literature
+.":"1","Atlases (Geographic).":"1","Auction catalogs.":"2","Autobiographies.":"5","Ballads":"4","Ballads
+.":"10","Bible.":"1","Bibliographies.":"2","Bills.":"7","Biographies":"2","Biographies.":"43","Blank
+ forms.":"24","Book auction catalogs.":"3","Book prospectuses.":"1","Booksellers' advertisements":"34"
+,"Booksellers' advertisements.":"2","Booksellers' catalogs":"4","Booksellers' catalogs.":"10","Broadside
+ poems.":"950","Broadsides":"211","Broadsides .":"1","Broadsides, English.":"1","Broadsides.":"364","Burlesques
+.":"5","Calendars.":"1","Captivity narratives.":"2","Casts lists":"1","Catalogs.":"51","Catechisms."
+:"2","Chapbooks":"9","Chapbooks.":"9","Charters.":"5","Chronicles.":"8","Comedies.":"2","Comic histories
+.":"1","Confessions.":"2","Congressional addresses":"2","Constitutions.":"4","Cookbooks.":"3","Courtesy
+ books.":"1","Deeds.":"1","Devotional literature":"1","Devotional literature.":"3","Dialogues":"1","Dialogues
+.":"13","Diaries.":"3","Dictionaries.":"1","Directories.":"18","Discoursive works.":"1","Division lists
+.":"12","Election sermons":"2","Elegiac poetry, English.":"1","Elegies.":"5","Emblem books.":"1","Ephemerides
+.":"1","Epistolary novels.":"2","Essays":"1","Essays.":"32","Exploration literature.":"2","Fables.":"1"
+,"Facetiae.":"1","Fairy tales.":"1","Fast day proclamations":"41","Fast day proclamations.":"1","Fast-day
+ sermons":"1","Fiction.":"92","Fourth of July addresses":"2","Funeral addresses":"1","Funeral sermons"
+:"13","Funeral sermons.":"2","Gallows speeches.":"7","Games.":"1","Gazetteers.":"2","Genealogies.":"2"
+,"Geographic works.":"1","Grammars.":"4","Guidebooks.":"2","Historical fiction.":"2","Historical works
+.":"2","Humorous works.":"2","Hymns.":"7","Illustrated works.":"1","Imaginary voyages.":"1","Jestbooks
+.":"5","Juvenile literature":"28","Juvenile literature.":"4","Lampoons.":"1","Laws, session.":"2","Laws
+.":"216","Lectures.":"2","Legal formularies.":"8","Legal petitions.":"2","Legal works.":"29","Legislative
+ addresses.":"10","Legislative proceedings.":"7","Letters.":"156","Liturgical books.":"3","Local histories
+.":"7","Manuals (Handbooks).":"4","Maps":"8","Membership lists.":"1","Memoirs.":"18","Memorials (Commemorative
+)":"1","Military histories":"1","Military histories.":"5","Military manuals.":"2","Miscellanies.":"1"
+,"Musical works.":"7","Narratives":"1","Narratives.":"18","National songs.":"1","Newsbooks":"2","Newsbooks
+.":"158","Newspapers":"17","Newspapers.":"5","Novels.":"15","Occasional poems.":"3","Occasional sermons
+.":"2","Odes.":"9","Operas.":"1","Parliamentary addresses.":"1","Parliamentary petitions.":"8","Periodicals"
+:"31","Periodicals.":"6","Petitions.":"20","Playbills.":"6","Plays":"2","Plays.":"136","Poems":"24","Poems
+.":"344","Political works.":"2","Prayer books":"1","Prayer books.":"5","Prayers.":"4","Primers (Instructional
+ books)":"2","Primers (Instructional books).":"1","Printers' advertisements":"2","Proclamations":"1"
+,"Proclamations.":"56","Programs.":"3","Prospectuses.":"54","Protest literature.":"1","Psalters":"1"
+,"Psalters.":"5","Questions and answers.":"6","Record-keeping works.":"1","Regulations.":"3","Romances
+.":"2","Royal ordinances.":"3","Royal petitions.":"4","Sales catalogs.":"7","Satire.":"1","Satires."
+:"14","Sermons":"24","Sermons.":"431","Session laws.":"33","Song sheets.":"1","Songs":"1","Songs.":"116"
+,"Speeches.":"1","Sporting event programs.":"1","Subscribers' lists.":"4","Subscription lists.":"1","Technical
+ formularies.":"2","Textbooks.":"1","Thanksgiving day proclamations":"43","Thanksgiving sermons":"5"
+,"Thanksgiving sermons.":"2","Theater programs.":"1","Tragedies.":"5","Translations.":"3","Travel literature
+.":"9","Treaties.":"16","Trial proceedings.":"12","Type specimens.":"1","Utopian literature. |2rbgenr"
+:"1","Voting registers.":"1","Yearbooks.":"1","plays.":"1"},"archive":{"estcstar":"25501"},"freeculture"
+:{"T":"25501"},"has_full_text":{"F":"25501"},"federation":{"ESTC":"25501"},"typewright":{},"doc_type"
+:{},"discipline":{},"role":{"role_AUT":"11494","role_OWN":"494","role_RPS":"494"},"access":{}},"message"
+:"","page_size":30,"collected":{}}
+
+		part of the response is a "facets" node, which includes all of the totals for different facets,
+		etc.  This no doubt affects the faceting on the left, because it includes totals numbers that
+		could be used for the faceted browse.  Not sure if it affects the search term roles, but there a
+		'role' node that seems to include on the exact same roles.  I need to figure out where this
+		search is being controlled from, and make it return all of the facets we care about.  I just 
+		checked this out via SOLR, and, yes, the roles are being built dynamically based on roles present.
+		There are currently only role_AIR, role_OWN, and rol_RPS in the ssystem, so that is all that
+		is showing up.  
+		
+		
+		
+		search.js						Line 134	function onSuccess(resp) defines a bunch of stuff
+													to do, including make a call to build the search.
+													Something is happening that is calling this after
+													a request to the server.
+	 	
+	 	
+	 	search.js						Line 158	Calls body.trigger('RedrawSearchResults', resp);
+	 												so it looks like 'resp' is the object that gets
+	 												sent?  And 'resp' is, I think, short for 'response.'
+	 												It must be asking the server for parameters of some
+	 												sort, which means that the rolls list must be getting
+	 												sent from rails.
+													
+		I can't figure out how these things are combined, or where the obj comes from that gets stent to body.bind below		
+													
+														
+		search_reult_view.js			Line 114 	body.bind('RedrawSearchResults', function(ev, obj)
+													is the function/binding that makes the call
+													(defined next) that draws the search area.  If is
+													bound with an 'ev' and an 'obj' object.  The 'obj'
+													object is what gets passed down the chain and affects
+													the search options/roles.
+		search_reult_view.js			Line 129	Calls search_result_draw_query.js as follows:
+													createSearchForm(obj.query, obj.facets.role, obj.title).
+													The 'roles' value is part of an 'obj' object model.
+		search_result_draw_query.js		Line 131 	createSearchForm = function(query, roles, workTitle) 
+													gets called to build thea search form
+		search_result_draw_query.js		Line 187	These lines display the rows of the search interface that contain
+													the current query terms
+		search_result_draw_query.js		Line 196	Call to function newSearchTerm(roles,(key==="pages") ) to draw the
+													the row that allows users to add a new search term
+		search_result_draw_query.js		Line 64		function newSearchTerm(roles, disabled ) actually creates the row 
+													with the form fields to let users add a new query.  Non 'role'
+													options are hardcoded.  Roles are handles dynamically using the
+													passed 'roles' object. 
+		search_result_draw_query.js		Line 71		Starts a loop that goes through every passed role.  By the time
+													we get here the rolls that are passed only include role_AUT, role_OWN
+													and role_RPS		
+													
+													
+		
+Need now to add the ESTC ID search constraint to the system.  It should be finding things with an 
+ESTC ID when one is submitted as a blanked query and when one specifically searches for it as
+per the list item I added to Line 64 of search_result_draw_query.js
+
+
+
+
+what might work:  change the format of the :term query type (query_format.rb line 39 so taht it can include a wildcard*
+character.  Then, on line 72 of search_controller.rb (collex), check to see if the searched for item is an ESTCID
+and, if it is, comcatenate a wildcard* to the front of the string.  Or possible add an http://estc.bl.uk to the beginning
+and change the pattern so that it will accept that.
+
+
+http://estc.bl.uk/W12316
+
+This works:
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=*.*&fq=-instanceof%3Ahttp*
+
+These works to return a single record.  Second one is a URI:
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=uri%3A%22http%3A%2F%2Festc.bl.uk%2F3404550%22&wt=json&indent=true
+http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=uri%3A%22http%3A%2F%2Festc.bl.uk%2FT65358%22&wt=json&indent=true
+
+This is the URL that the details controller uses to get the results for a single item:
+curl_url = "http://estc21.ucr.edu:8983/solr/archive_estcstar/select?q=uri%3A%22#{item_uri}%22&wt=json&indent=true"
+
+This is the regex to match an estc #
+/^\s*\D\d{4,7}\s*$/
+
+Need to find out the exact limits of the number of numbers after the letter. Could also 
+Improve by making it look for only specific letters at the start of the string.
+
+{"q"=>"+uri=http://estc.bl.uk/R179286", "f"=>"+federation:ESTC", "fq"=>"-instanceof:http*", "hl"=>"on", "start"=>"0", "action"=>"index", "controller"=>"search", "format"=>"xml"}
+
+
+		puts "THISTHISTHISTHISTHISTHIS"
+		puts "starting q: " + params['q']
+		# correct protected character in URI queries
+		if params.key?('q')
+		  if params['q'].match(/*\w\d+/) 
+		    params['q'] = 'queen'
+		  end
+		end
+		puts "ending q: " + params['q']
+		puts "THISTHISTHISTHISTHISTHIS"
+		
+		
+&uri=N69395
+
+##############################################
+
+Speed problem
+
+Code in search_controller.rb starting at line 76
+
+For how to work with xml DOM to do the parsing in and out 
+see: http://stackoverflow.com/questions/1611237/how-to-manipulate-dom-with-ruby-on-rails
+
+For how to work with a JSON object to do parsing ina and out
+https://github.com/rails/jbuilder
+
+this query works to get all instances of a given URL:
+
+instanceof:"http://estc.bl.uk/N10001"
+
+If I used this and then parsed the json
+I could speed things up by only going to the db once per item to get info about
+the children, rather than looping through all of the found instances and looking them up 
+independently.
+
+The below query works to get all of the joined children but doesn't return the parent with them:
+{!join from=uri to=instanceof}uri:"http://estc.bl.uk/N10001"
+
+This works to return the parent and its children.  This is semi-useful, but not
+completely.  If worse comes to worse I could have catalog do the dual request and then 
+put the JSON together before sending back to Collex.  This would be faster than
+multiple Jscript requests.
+uri:"http://estc.bl.uk/N10001"&{!join from=uri to=instanceof}uri:"http://estc.bl.uk/N10001"
+
+This works to return multipals
+(uri:"http://estc.bl.uk/T160916" || uri:"http://estc.bl.uk/N10001")
+
+This works too
+uri:("http://estc.bl.uk/T160916" || "http://estc.bl.uk/N10001")
+
+And so does this
+uri:("http://estc.bl.uk/T160916"||"http://estc.bl.uk/N10001")
+
+
+
+
+##############################################
+
+
+search_helper.rb line 522
+This is where the facet returns are being set (I'm prett sure).
+To verify, uncomment the header row and see if it shows up.
+
+_search_sidebar.html.erb line 40
+This is where the call to load the facet constraint is being setup.
+
+To fix, first fix search_helper to make it put the right title on
+facet and make it expandable and contractable.  Then, keep adding new
+facet tables in _search_sidebar so that they all showup.
+
+
+********************************************
+To debug, write output to log instead of 'puts' using:
+logger.info "This is from create_genre_table"
+
+To view the output:
+vi development.log
+<ESC>->G
+<ESC>->?string
+
+see http://www.lagmonster.org/docs/vi.html
+
+Using the above sequence, I can write debug output to the log
+
+********************************************
+
+
+The Shelfmark for URL replacement for holding that I did last time happens in 
+search_result_draw_media_block.js in the hasInstanceItem case line 252
+
+
+
+
+***************************************************
+***************************************************
+Removal or modification of unused .css 
+
+***************************************************
+***************************************************
+
+assets/stylesheets/typewright
+assets/stylesheets/modnets
+assets/stylesheets/js_dialog.css.scss
+assets/stylesheets/18th
+assets/stylesheets/gla
+assets/stylesheets/nines
+assets/stylesheets/sro
+assets/stylesheets/estc
+assets/stylesheets/collex
+commented out call at line 106 /assets/stylesheets/js_dialog.css.scss
+commented out lines 187, 206, 215, 216, 219 assets/style/estc/main_skin.css.scss
+commented out lines 270, 289, 298, 299, 302, 303 assets/style/mesa/main_skin.css.scss
+commented out lines 241, 152, 269, 270, 273, 274 assets/style/mesa/main_skin_by_goolii.css.scss
+
+
+This is the file that calls the yui.yahooapis.com that makes a difference
+/app/views/layouts/_dependencies.html.erb lines 6, 9, 10
+
+
+
+
+
